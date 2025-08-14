@@ -3,6 +3,7 @@ import { log } from 'node:console';
 import exp from 'node:constants';
 
 test('Test fetch cocktail info', async ({ page }) => {
+    test.setTimeout(10_000)
     await page.goto(`file://${process.cwd()}/index.html`);
 
     let input = page.locator('#id');
